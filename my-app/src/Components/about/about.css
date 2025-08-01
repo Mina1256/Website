@@ -56,14 +56,12 @@
         flex-direction: column;
         text-align: left; 
         align-items: center;
-        background-color: red;
     }
 
     .about-text {
         align-items: flex-start;
         text-align: left;
         width: min-content;
-        background-color: blue;
     }
 }
 
