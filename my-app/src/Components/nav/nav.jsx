@@ -11,17 +11,10 @@ const Nav = () => {
     links.forEach(link => {
         link.addEventListener('click', function(event) {
             if (isDropdownOpen) {
-                toggleDropdown();
+                toggleDropdown()
             }
-
-            const targetSection = link.id;
-            if (targetSection === "hideBar") {
-                setTimeout(() => {
-                    setShow(false);
-                }, 600);
-            }
-        });
-    });
+        })
+    })
 
     const controlNavbar = ()=>{
         const dropdown = document.querySelector(".dropdown");
@@ -43,26 +36,19 @@ const Nav = () => {
     }
     
     useEffect(() => {
-        // Check scroll position when main page first loads
-        if (window.scrollY > 100) {
-            setShow(false); // Hide navbar if scrolled down
-        } else {
-            setShow(true); // Show navbar if at the top
-        }
-
         window.addEventListener('resize', function() {
             isDropdownOpen = true;
             if (window.innerWidth >= 1000) {
                 toggleDropdown();
             }
-        });
+        })
 
         window.addEventListener('scroll', controlNavbar);
 
         return () => {
-            window.removeEventListener('scroll', controlNavbar);
-        };
-    }, []);
+            window.removeEventListener('scroll', controlNavbar)
+        }
+    }, [])
 
     const toggleDropdown = () => {
         const dropdown = document.querySelector(".dropdown");
@@ -88,9 +74,9 @@ const Nav = () => {
                 <h2 className="name"> Mina Mikhail</h2>
                 <div className="navbarMenu">
                     <Link to="about-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Home</Link>
-                    <Link id="hideBar" to="experience-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Experiences</Link>
-                    <Link id="hideBar" to="projects-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Projects</Link>
-                    <Link id="hideBar" to="news-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Achievements</Link>
+                    <Link to="experience-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Experiences</Link>
+                    <Link to="projects-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Projects</Link>
+                    <Link to="news-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">News</Link>
                 </div>
 
                 <div className="burger" onClick={toggleDropdown}>
@@ -112,7 +98,7 @@ const Nav = () => {
                         Projects
                     </Link>
                     <Link to="news-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">
-                        Achievements
+                        News
                     </Link>
                 </div>
             </div>
