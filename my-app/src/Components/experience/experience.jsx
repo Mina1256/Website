@@ -106,14 +106,14 @@ const Experience = () => {
             <li><strong>3D printed airfoils for wind tunnel testing.</strong></li>
             <li>Created a custom wind tunnel and custom measuring tools to be able to conduct the research.</li>
           </ul>
-          <a 
+          {/* <a 
             href="/Research_camber_position.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
             style={{ color: "blue", textDecoration: "underline", display: "block", marginTop: "10px" }}
           >
             View Research PDF
-          </a>
+          </a> */}
         </div>
       )
     },
