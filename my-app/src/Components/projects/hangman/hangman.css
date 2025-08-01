@@ -1,0 +1,152 @@
+.hangmanProject {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 1;
+}
+
+.game {
+    background-color: white;
+    width: 70vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hangmanGameImage {
+    height: 300px;
+}
+
+.hangmanImageGuesses {
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hangmanUnknownWord {
+    display: flex;
+    justify-content: space-around;
+    width: 120px;
+}
+
+.hangmanUnknownWordContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hangmanButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hangmanButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hangmanButtons button {
+    /* /* background-color: darkgray; */
+    color: black;
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
+    margin-right: 1px;
+    margin-left: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hangmanButtons button:hover,
+.gameResultButton:hover {
+    background-color: rgb(100,100,100);
+}
+
+.visit:hover {
+    color: white; /* Ensure the text color remains unchanged */
+    text-decoration: none; /* Remove any underline or default hover styles */
+}
+
+.hangmanButtonsContainers {
+    display: flex;
+    flex-direction: column;
+}
+
+.gameResult {
+    height: 100vh;
+    width: 70vw;
+    background-color: rgb(221, 221, 221, 0.7);
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameResultTxt {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.gameResultButton {
+    background-color: gray;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    width: 110px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.return {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background-color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.return:hover {
+    background-color: rgb(100, 100, 100);
+    border: 2px solid black;
+}
+
+.return:focus {
+    border-color: black; /* Ensure the border remains black */
+}
+
+@media screen and (max-width: 1000px) {
+    .hangmanProject {
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+    }
+
+    .game {
+        width: 100vw;
+    }
+
+    .hangmanButtons button {
+        height: 25px;
+        width: 25px;
+    }
+
+    .gameResult {
+        width: 100vw;
+    }
+}

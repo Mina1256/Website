@@ -1,0 +1,15 @@
+.projects-section {
+    padding-top: 40px;
+    width: 100vw;
+    background-color: rgb(221, 221, 221);
+}
+
+.projects-title {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Arial', sans-serif;
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+}

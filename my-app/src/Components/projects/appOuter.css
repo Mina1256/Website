@@ -1,0 +1,69 @@
+.appProjectHome {
+    background-color: rgb(221,221,221);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.projectTextHome {
+    width: 40vw;
+    height: 350px;
+    background-color: rgb(221,221,221);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.projectTitleHome {
+    margin-left: 20px;
+    font-size: 40px;
+    color: black;
+}
+
+.projectBriefHome {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.seeProject {
+    width: 250px;
+    height: 100px;
+    font-size: 35px;
+    border-radius: 50px;
+    background-color: black;
+    margin-left: 20px;
+    border: none;
+    box-shadow: 0px 0px 10px gray;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    text-decoration: none;
+}
+
+.seeProject:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+    .appProjectHome {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .projectTextHome {
+        width: 90vw;
+        height: 250px;
+    }
+
+    .seeProject {
+        width: 250px;
+        height: 50px;
+    }
+}

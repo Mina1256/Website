@@ -1,0 +1,86 @@
+.news-section {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* Ensure no part of the next slide is visible */
+    background-color: rgb(221, 221, 221);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(100, 100, 100, 0.5) 30%, rgba(221, 221, 221, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news-title {
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 800;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #222;
+}
+
+.news-slide {
+    padding: 20px;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.news-link {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.news-link:hover {
+    color: gray;
+}
+
+.news-link h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.news-link p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Slick carousel overrides */
+.slick-dots {
+    bottom: 0px;
+    color: black;
+}
+
+.slick-dots li button:before {
+    font-size: 16px; /* Increase the size of the dots */
+    color: black; /* Set the dots to black */
+    opacity: 1; /* Ensure full visibility */
+}
+
+.slick-dots li.slick-active button:before {
+    color: rgb(54, 54, 54); /* Keep the active dot black */
+    font-size: 18px; /* Slightly larger size for the active dot */
+}
+
+.news-image {
+    width: 70vw;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the images */
+}
+
+/* Media query for mobile dimensions */
+@media (max-width: 768px) {
+    .news-section {
+        width: 100vw; /* Use full width for mobile screens */
+    }
+
+    .news-image {
+        width: 60vw; /* Adjust image size for mobile screens */
+    }
+}

@@ -1,0 +1,63 @@
+.ticGameBoard {
+    height: min(70vw, 100vh);
+    width: min(70vw, 100vh);
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticBoxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: min(22vw, 31vh);
+    height: min(22vw, 31vh);
+    width: min(22vw, 31vh);
+    background-color: white;
+    color: black
+} 
+
+.ticRow1, .ticRow2, .ticRow3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.XOImg {
+    height: 30px;
+    width: 30px;
+}
+
+.ticLine {
+    width: min(70vw, 100vh);
+    height: 15px;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    background-color: rgb(221,221,221);
+}
+
+.ticGameBoardContainer {
+    display: flex;
+    width: 70vw;
+    height: 100vh;
+    margin-left: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .ticGameBoardContainer {
+        width: 100vw;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .ticGameBoardContainer {
+        height: 65vh;
+    }
+}
+

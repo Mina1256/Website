@@ -1,0 +1,9 @@
+.websiteImage {
+    width: 70vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .websiteImage {
+        width: 100vw;
+    }
+}

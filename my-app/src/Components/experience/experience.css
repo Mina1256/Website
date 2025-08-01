@@ -1,0 +1,65 @@
+.experience-section {
+    width: 100vw;
+    background-color: rgb(221,221,221);
+    color: #333;
+    text-align: left; /* Align all text to the left */
+}
+
+.experience-title {
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #222;
+}
+
+.experience-filters {
+    display: flex;
+    justify-content: flex-start; /* Align filters to the left */
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.experience-filters button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #555;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.experience-filters button.active {
+    background-color: #555;
+    color: #fff;
+}
+
+.experience-filters button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.vertical-timeline-element-content {
+    padding-left: 20px; /* Ensure consistent left alignment for timeline content */
+}
+
+.vertical-timeline-element-content ul {
+    padding-left: 40px; /* Indent bullet points slightly */
+    list-style-position: outside; /* Ensure bullets are outside the text */
+}
+
+.vertical-timeline-element-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.vertical-timeline-element-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #777;
+    margin-bottom: 10px;
+}
