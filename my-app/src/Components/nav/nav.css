@@ -16,7 +16,7 @@
 }
 
 .navbar.hidden {
-    transform: translateX(-50%) translateY(-100%); /* Move the navbar out of view */
+    transform: translateX(-50%) translateY(-100%);
 }
 
 .name {

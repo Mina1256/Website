@@ -41,7 +41,7 @@ const Website = () => {
                 <img
                     src={websiteImg1}
                     alt="Website Screenshot 1"
-                    className={`websiteImage ${imagesLoaded.img1 ? '' : 'hidden'}`}
+                    className={`websiteImage ${imagesLoaded.img1 ? '' : 'hiddenImg'}`}
                     onLoad={() => handleImageLoad('img1')}
                 />
 
@@ -50,7 +50,7 @@ const Website = () => {
                 <img
                     src={websiteImg2}
                     alt="Website Screenshot 2"
-                    className={`websiteImage ${imagesLoaded.img2 ? '' : 'hidden'}`}
+                    className={`websiteImage ${imagesLoaded.img2 ? '' : 'hiddenImg'}`}
                     onLoad={() => handleImageLoad('img2')}
                 />
 
@@ -59,7 +59,7 @@ const Website = () => {
                 <img
                     src={websiteImg3}
                     alt="Website Screenshot 3"
-                    className={`websiteImage ${imagesLoaded.img3 ? '' : 'hidden'}`}
+                    className={`websiteImage ${imagesLoaded.img3 ? '' : 'hiddenImg'}`}
                     onLoad={() => handleImageLoad('img3')}
                 />
             </div>

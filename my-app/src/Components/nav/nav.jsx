@@ -37,8 +37,9 @@ const Nav = () => {
     
     useEffect(() => {
         window.addEventListener('resize', function() {
-            isDropdownOpen = true;
+
             if (window.innerWidth >= 1000) {
+                isDropdownOpen = true;
                 toggleDropdown();
             }
         })
@@ -58,12 +59,14 @@ const Nav = () => {
             if (!isDropdownOpen) {
                 dropdown.style.transform = `translate3d(0, 0, 0)`
                 navbar.style.opacity = 0.3;
-                setIsDropdownOpen(true)
+                // setIsDropdownOpen(true)
+                isDropdownOpen = true;
             }
             else {
                 dropdown.style.transform = `translate3d(0, -300px, 0)`
                 navbar.style.opacity = 1.0;
-                setIsDropdownOpen(false)
+                // setIsDropdownOpen(false)
+                isDropdownOpen = false;
             }
         }
     };
@@ -76,7 +79,7 @@ const Nav = () => {
                     <Link to="about-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Home</Link>
                     <Link to="experience-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Experiences</Link>
                     <Link to="projects-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Projects</Link>
-                    <Link to="news-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">News</Link>
+                    <Link to="news-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">Achievements</Link>
                 </div>
 
                 <div className="burger" onClick={toggleDropdown}>
@@ -98,7 +101,7 @@ const Nav = () => {
                         Projects
                     </Link>
                     <Link to="news-section" spy={true} offset={0} smooth={true} duration={500} className="navLink">
-                        News
+                        Achievements
                     </Link>
                 </div>
             </div>

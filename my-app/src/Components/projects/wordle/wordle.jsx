@@ -39,7 +39,7 @@ const Wordle = () => {
                 <img
                     src={wordleImg1}
                     alt="Wordle Screenshot 1"
-                    className={`wordleImage ${imagesLoaded.img1 ? '' : 'hidden'}`}
+                    className={`wordleImage ${imagesLoaded.img1 ? '' : 'hiddenImg'}`}
                     onLoad={() => handleImageLoad('img1')}
                 />
 
@@ -48,7 +48,7 @@ const Wordle = () => {
                 <img
                     src={wordleImg2}
                     alt="Wordle Screenshot 2"
-                    className={`wordleImage ${imagesLoaded.img2 ? '' : 'hidden'}`}
+                    className={`wordleImage ${imagesLoaded.img2 ? '' : 'hiddenImg'}`}
                     onLoad={() => handleImageLoad('img2')}
                 />
             </div>

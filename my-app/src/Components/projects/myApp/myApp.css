@@ -122,6 +122,6 @@
     margin-bottom: 15px;
 }
 
-.hidden {
+.hiddenImg {
     display: none; /* Hide images until they are loaded */
 }

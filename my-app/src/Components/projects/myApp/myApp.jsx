@@ -41,7 +41,7 @@ const MyApp = () => {
                 <img
                     src={appImg1}
                     alt="App Screenshot 1"
-                    className={`appImage ${imagesLoaded.img1 ? '' : 'hidden'}`}
+                    className={`appImage ${imagesLoaded.img1 ? '' : 'hiddenImg'}`}
                     onLoad={() => handleImageLoad('img1')}
                 />
 
@@ -50,7 +50,7 @@ const MyApp = () => {
                 <img
                     src={appImg2}
                     alt="App Screenshot 2"
-                    className={`appImage ${imagesLoaded.img2 ? '' : 'hidden'}`}
+                    className={`appImage ${imagesLoaded.img2 ? '' : 'hiddenImg'}`}
                     onLoad={() => handleImageLoad('img2')}
                 />
 
@@ -59,7 +59,7 @@ const MyApp = () => {
                 <img
                     src={appImg3}
                     alt="App Screenshot 3"
-                    className={`appImage ${imagesLoaded.img3 ? '' : 'hidden'}`}
+                    className={`appImage ${imagesLoaded.img3 ? '' : 'hiddenImg'}`}
                     onLoad={() => handleImageLoad('img3')}
                 />
             </div>
