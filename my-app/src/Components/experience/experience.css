@@ -20,6 +20,7 @@
     gap: 15px;
     margin-bottom: 20px;
     padding-left: 15px;
+    flex-wrap: wrap;
 }
 
 .experience-filters button {
@@ -40,6 +41,19 @@
 .experience-filters button:hover {
     background-color: #333;
     color: #fff;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .experience-filters {
+        justify-content: center; /* Center the buttons on mobile */
+        gap: 10px; /* Reduce the gap between buttons */
+    }
+
+    .experience-filters button {
+        width: 45%; /* Make buttons take up 45% of the width */
+        text-align: center;
+    }
 }
 
 .vertical-timeline-element-content {

@@ -23,16 +23,11 @@
 
 .about-content {
     display: flex;
-    align-items: center;
+    align-items: left;
     width: 60%;
     height: auto;
     padding: 20px;
-}
-
-.about-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin: 0 auto;
 }
 
 .about-name {
@@ -52,5 +47,21 @@
     color: #ffffff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     text-align: left;
+}
+
+/* Media query for mobile dimensions */
+@media screen and (max-width: 768px) {
+    .about-content {
+        width: 100%;
+        flex-direction: column;
+        text-align: left; 
+        align-items: center;
+    }
+
+    .about-text {
+        align-items: flex-start;
+        text-align: left;
+        width: 300px;
+    }
 }
 
