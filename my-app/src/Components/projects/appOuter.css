@@ -20,6 +20,8 @@
 .projectTitleHome {
     margin-left: 20px;
     font-size: 40px;
+    font-family: 'Open Sans', sans-serif; /* Updated font for a modern look */
+    font-weight: 700;
     color: black;
 }
 
@@ -27,28 +29,31 @@
     margin-right: 20px;
     margin-left: 20px;
     font-size: 20px;
+    font-family: 'Open Sans', sans-serif; /* Updated font for readability */
     color: black;
 }
 
 .seeProject {
-    width: 250px;
-    height: 100px;
-    font-size: 35px;
-    border-radius: 50px;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif; /* Updated font for buttons */
+    border-radius: 5px; /* Changed from circular to slightly rounded corners */
     background-color: black;
     margin-left: 20px;
     border: none;
-    box-shadow: 0px 0px 10px gray;
-    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, background-color 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     color: white;
     text-decoration: none;
 }
 
 .seeProject:hover {
-    transform: scale(1.1);
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+    background-color: #333; /* Slightly lighter background on hover */
 }
 
 @media (max-width: 1000px) {
@@ -63,7 +68,7 @@
     }
 
     .seeProject {
-        width: 250px;
+        width: 150px;
         height: 50px;
     }
 }

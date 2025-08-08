@@ -17,7 +17,8 @@
     "react-slick": "^0.30.3",
     "react-typed": "^2.0.12",
     "react-vertical-timeline-component": "^3.5.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "three": "^0.179.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

@@ -1,0 +1,15 @@
+.macbook-container {
+    width: 70vw;
+    height: 100vh;
+    position: absolute;
+    pointer-events: none;
+  }
+
+@media (max-width: 1000px) {
+    .macbook-container {
+      width: 100vw;
+      height: 60vh;
+      position: relative;
+      pointer-events: none;
+    }
+  }

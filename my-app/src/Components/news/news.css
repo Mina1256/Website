@@ -38,12 +38,25 @@
 
 .news-link h3 {
     font-size: 1.5rem;
+    color: #000000;
     margin-bottom: 10px;
 }
 
 .news-link p {
     font-size: 1rem;
-    color: #555;
+    color: #000000;
+}
+
+/* Add hover effect to make the text below the image become a darker gray when the image is hovered */
+.news-slide:hover .news-link p {
+    color: #535353; /* Darker gray for the text on hover */
+    transition: color 0.3s ease; /* Smooth transition for the color change */
+}
+
+/* Add hover effect to change the title text color when the image is hovered */
+.news-slide:hover .news-link h3 {
+    color: #535353; /* Change title text color on hover */
+    transition: color 0.3s ease; /* Smooth transition for the color change */
 }
 
 /* Slick carousel overrides */
@@ -72,6 +85,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto; /* Center the images */
+    filter: grayscale(1); /* Apply grayscale filter */
+    transition: filter 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.news-image:hover {
+    filter: grayscale(0); /* Remove grayscale on hover */
 }
 
 /* Media query for mobile dimensions */

@@ -56,6 +56,10 @@
     }
 }
 
+.vertical-timeline {
+    z-index: 11; /* Ensure the vertical timeline appears above other elements */
+}
+
 .vertical-timeline-element-content {
     padding-left: 20px; /* Ensure consistent left alignment for timeline content */
 }

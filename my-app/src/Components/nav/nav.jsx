@@ -3,18 +3,33 @@ import './nav.css';
 import { Link } from 'react-scroll';
 
 const Nav = () => {
-    let [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const isDropdownOpenRef = useRef(isDropdownOpen);
     const [show, setShow] = useState(true);
     const prevScrollY = useRef(0);
 
-    const links = document.querySelectorAll(".navLink")
-    links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            if (isDropdownOpen) {
-                toggleDropdown()
+    useEffect(() => {
+        isDropdownOpenRef.current = isDropdownOpen;
+    }, [isDropdownOpen]);
+
+    useEffect(() => {
+        const handleNavLinkClick = () => {
+            if (isDropdownOpenRef.current) {
+                toggleDropdown();
             }
-        })
-    })
+        };
+
+        const links = document.querySelectorAll(".dropdown .navLink");
+        links.forEach(link => {
+            link.addEventListener('click', handleNavLinkClick);
+        });
+
+        return () => {
+            links.forEach(link => {
+                link.removeEventListener('click', handleNavLinkClick);
+            });
+        };
+    }, [isDropdownOpen]);
 
     const controlNavbar = ()=>{
         const dropdown = document.querySelector(".dropdown");
@@ -37,9 +52,8 @@ const Nav = () => {
     
     useEffect(() => {
         window.addEventListener('resize', function() {
-
             if (window.innerWidth >= 1000) {
-                isDropdownOpen = true;
+                setIsDropdownOpen(true);
                 toggleDropdown();
             }
         })
@@ -56,17 +70,17 @@ const Nav = () => {
         const navbar = document.querySelector(".navbar")
 
         if (dropdown) {
-            if (!isDropdownOpen) {
+            if (!isDropdownOpenRef.current) {
                 dropdown.style.transform = `translate3d(0, 0, 0)`
                 navbar.style.opacity = 0.3;
-                // setIsDropdownOpen(true)
-                isDropdownOpen = true;
+                // setIsDropdownOpen(true);
+                isDropdownOpenRef.current = true;
             }
             else {
                 dropdown.style.transform = `translate3d(0, -300px, 0)`
                 navbar.style.opacity = 1.0;
-                // setIsDropdownOpen(false)
-                isDropdownOpen = false;
+                // setIsDropdownOpen(false);
+                isDropdownOpenRef.current = false;
             }
         }
     };

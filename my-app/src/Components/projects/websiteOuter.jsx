@@ -1,6 +1,7 @@
 import './websiteOuter.css';
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import MacbookModel from './MacbookModel';
 
 const WebsiteOuter = () => {
     const navigate = useNavigate();
@@ -26,9 +27,10 @@ const WebsiteOuter = () => {
             <div className='websiteProjectHome'>
 
                 <div className='imageContainer'>
-                    <video className='websiteVid' playsInline autoPlay controls={null} muted loop height="250px">
+                    {/* <video className='websiteVid' playsInline autoPlay controls={null} muted loop height="250px">
                         <source src="/website_vid.mp4" type="video/mp4" />
-                    </video>
+                    </video> */}
+                    <MacbookModel mediaSrc="/website_vid.mov" isVideo={true} />
                 </div>
 
                 <div className="projectTextHome">

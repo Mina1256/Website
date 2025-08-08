@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import "./experience.css";
@@ -207,11 +207,17 @@ const Experience = () => {
     }
   ];
 
-  const [filter, setFilter] = useState("All");
+  // Initialize filter state from localStorage or default to "All"
+  const [filter, setFilter] = useState(() => localStorage.getItem("experienceFilter") || "All");
 
   const filteredExperiences = filter === "All"
     ? [...allExperiences].reverse()
     : [...allExperiences].filter(exp => exp.type === filter).reverse();
+
+  // Persist filter state to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("experienceFilter", filter);
+  }, [filter]);
 
   return (
     <div className="experience-section">
