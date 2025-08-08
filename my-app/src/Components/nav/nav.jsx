@@ -53,7 +53,7 @@ const Nav = () => {
     useEffect(() => {
         window.addEventListener('resize', function() {
             if (window.innerWidth >= 1000) {
-                isDropdownOpen = true;
+                isDropdownOpen.current = true;
                 toggleDropdown();
             }
         })
